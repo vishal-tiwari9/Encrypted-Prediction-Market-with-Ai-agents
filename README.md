@@ -1,66 +1,194 @@
-## Foundry
+# AI Agents Prediction Market (BNB Chain)
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+An experimental **on-chain prediction market powered by autonomous AI agents**.
 
-Foundry consists of:
+Users can create custom AI agents, deploy them onchain, and allow them to participate in prediction markets autonomously.
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+This project explores the future of **Autonomous Economic Agents (AEAs)** interacting with decentralized markets.
 
-## Documentation
+---
 
-https://book.getfoundry.sh/
+## Overview
 
-## Usage
+Prediction markets are traditionally human-driven.
 
-### Build
+This project introduces **AI agents as market participants**.
 
-```shell
-$ forge build
+Each agent can:
+
+• analyze signals  
+• choose prediction positions  
+• interact with smart contracts  
+• operate autonomously  
+
+All agent interactions are recorded **onchain**.
+
+---
+
+## Architecture
+
+```
+User
+  │
+  ▼
+AI Agent Configuration
+  │
+  ▼
+Agent Deployment Contract
+  │
+  ▼
+Prediction Market Smart Contract
+  │
+  ▼
+BNB Chain
 ```
 
-### Test
+---
 
-```shell
-$ forge test
+## Features
+
+- AI Agents deployable onchain
+- Decentralized prediction markets
+- Autonomous market participation
+- Agent identity through smart contracts
+- Market state stored onchain
+- Open architecture for agent strategy logic
+
+---
+
+## Tech Stack
+
+- Solidity
+- Foundry
+- BNB Chain
+- AI Agent architecture
+- x402 protocol experiments
+- ERC-8004 compatibility
+
+---
+
+## Smart Contracts
+
+Key contracts include:
+
+**PredictionMarket.sol**
+
+Handles:
+
+- market creation
+- prediction placement
+- resolution
+- reward distribution
+
+**AgentRegistry.sol**
+
+Registers and tracks deployed agents.
+
+**AgentExecution.sol**
+
+Handles agent interaction with markets.
+
+---
+
+## Installation
+
+Clone repository
+
+```
+git clone https://github.com/vishal-tiwari9/Encrypted-Prediction-Market-with-Ai-agents.git
+cd Encrypted-Prediction-Market-with-Ai-agents
 ```
 
-### Format
+Install dependencies
 
-```shell
-$ forge fmt
+```
+forge install
 ```
 
-### Gas Snapshots
+Compile contracts
 
-```shell
-$ forge snapshot
+```
+forge build
 ```
 
-### Anvil
+Run tests
 
-```shell
-$ anvil
+```
+forge test
 ```
 
-### Deploy
+---
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+## Deployment
+
+Deploy using Foundry:
+
+```
+forge script script/Deploy.s.sol --rpc-url <RPC_URL> --private-key <PRIVATE_KEY> --broadcast
 ```
 
-### Cast
+---
 
-```shell
-$ cast <subcommand>
-```
+## Example Agent Flow
 
-### Help
+1. User creates AI agent configuration
+2. Agent contract deployed
+3. Agent receives market data
+4. Agent submits prediction transaction
+5. Market resolves
+6. Rewards distributed to agent owner
 
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+---
+
+## Use Cases
+
+• Autonomous trading agents  
+• AI driven prediction markets  
+• decentralized research forecasting  
+• autonomous economic agents  
+
+---
+
+## Security Considerations
+
+This is an **experimental research prototype**.
+
+Before production deployment:
+
+- add reentrancy guards
+- integrate oracle based resolution
+- perform full smart contract audits
+
+---
+
+## Roadmap
+
+- Agent strategy plugins
+- encrypted prediction inputs
+- decentralized oracle integration
+- multi-agent market competitions
+
+---
+
+## Inspiration
+
+Projects exploring AI agents in decentralized systems:
+
+- Polymarket
+- Fetch.ai
+- Autonolas
+- Ritual
+
+---
+
+## Contributing
+
+PRs and ideas welcome.
+
+Open an issue if you'd like to experiment with **AI agent based prediction markets**.
+
+---
+
+## License
+
+MIT
